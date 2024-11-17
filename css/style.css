@@ -134,6 +134,7 @@ sup {
 
 a {
   color: #007bff;
+  cursor:pointer;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
@@ -10138,4 +10139,175 @@ textarea.form-control {
 }
 .logo{
   object-fit:contain;
+}
+
+
+/* admin.ejs */
+.customer-header > ul {
+  right: 0;
+  z-index: 1;
+  min-width: 12.5rem;
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+  color: white;
+  background-color: #454545;
+  cursor: pointer;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.customer-header:hover > ul {
+  pointer-events: all;
+  visibility: visible;
+  position: absolute;
+  transform: translateY(0px);
+  opacity: 1;
+}
+.header-lists {
+  background: rgba(216, 42, 48, 0.75);
+}
+.header-lists ul li ul {
+  color: white;
+  position: absolute;
+  left: 0;
+  min-height: 0px;
+  white-space: nowrap;
+  min-width: 100%;
+  background: rgba(216, 42, 48, 0.75);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all .5s;
+}
+.header-lists > div > ul > li {
+  display: inline-block;
+  position: relative;
+  transition: all .5s;
+  color: #fff;
+}
+.header-lists > div > ul >*:not(:last-child) {
+  margin-right: 35px;
+}
+.header-lists > div > ul > li > a {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.header-lists > div > ul > li:hover {
+  background: white;
+  color: black;
+}
+.header-lists ul li:hover ul {
+  opacity: 1;
+  min-height: 220px;
+  pointer-events: all;
+  visibility: visible;
+  position: relative;
+}
+.choose-dashboard{
+  margin: 10px 0px;
+    padding: 16px 0px 0px;
+    font-size: 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    -webkit-box-shadow: rgb(221, 221, 221) 0px 0px 5px ;
+    box-shadow: rgb(221, 221, 221) 0px 0px 5px;
+    display: block ;
+    color: rgb(100, 100, 100);
+}
+.toggle-button-demo {
+  text-align: center;
+}
+
+.toggle-ios {
+  display: none;
+}
+
+.toggle-ios + .toggle-btn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  margin: 0 auto;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all .4s ease;
+  border: 1px solid #e8eae9;
+}
+
+.toggle-ios + .toggle-btn:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  left: 0;
+  border-radius: 2em;
+  background: #fbfbfb;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+.toggle-ios:checked + .toggle-btn {
+  background: #86d993;
+}
+
+.toggle-ios:checked + .toggle-btn:after {
+  left: 50%;
+}
+.btn-admin{
+  color:white;
+  background: rgb(0, 146, 63);
+  border: 1px solid;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.widget-title {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(top, rgb(255, 255, 255) 0%, rgb(242, 242, 242) 100%) rgb(242, 242, 242);
+}
+
+.table-news td,.table-news th{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px 5px 5px 10px;
+}
+.pagination-news{
+  display:flex;
+  justify-content: flex-end;
+}
+.img-news img{
+  max-width:100px; 
+  max-height: 100px;
+  display: block;
+  margin: auto;
+}
+.pagination-news a{
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 0px 1px;
+  border: 1px solid #00923F;
+  font-weight: bold;
 }

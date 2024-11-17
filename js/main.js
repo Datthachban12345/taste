@@ -11,7 +11,8 @@ var swiper = {
 		}catch(e){
 			console.log("loi swiperCustomer")
 		}
-	}
+	},
+
 }
 swiper.swiperCustomer();
 (function($) {
@@ -98,6 +99,7 @@ swiper.swiperCustomer();
 	};
 	carousel();
 
+
 	// $('nav .dropdown').hover(function(){
 
 	// 	var $this = $(this);
@@ -175,7 +177,6 @@ swiper.swiperCustomer();
 				$('.number').each(function(){
 					var $this = $(this),
 						num = $this.data('number');
-						console.log(num);
 					$this.animateNumber(
 					  {
 					    number: num,
@@ -204,7 +205,6 @@ swiper.swiperCustomer();
 
 					$('body .ftco-animate.item-animate').each(function(k){
 						var el = $(this);
-						console.log(el);
 						setTimeout( function () {
 							var effect = el.data('animate-effect');
 							if ( effect === 'fadeIn') {
